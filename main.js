@@ -164,11 +164,11 @@ export function evenOrOdd(x) {
 evenOrOdd(2);
 
 // Default parameters
-function sum(x, y = 0) {
+function sumd(x, y = 0) {
   console.log(x + y);
 }
 
-sum(2);
+sumd(2);
 
 // Fuction return
 
@@ -269,3 +269,188 @@ function countSheep(num) {
 }
 
 console.log(countSheep(2));
+
+function positiveSum(arr) {
+  let sum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      sum += arr[i];
+    }
+  }
+  return sum;
+}
+
+let arr = [2, 3, 4, 4];
+console.log(positiveSum(arr));
+
+function makeNegative(num) {
+  if (num <= 0) {
+    return num;
+  } else {
+    return num - num * 2;
+  }
+}
+
+console.log(makeNegative(8));
+
+function solution(str) {
+  let buffer = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    buffer += str[i];
+  }
+  return buffer;
+}
+console.log(solution("agam"));
+
+function boolToWord(bool) {
+  return bool ? "Yes" : "No";
+}
+console.log(boolToWord(true));
+
+function numberToString(num) {
+  let buffer = "";
+  for (let i = 1; i <= 1; i++) {
+    buffer += num;
+  }
+  return buffer;
+}
+
+console.log(numberToString(5));
+
+// function opposite(number) {
+//   if (number > 0) {
+//     return number * -1;
+//   } else {
+//     return number * -1;
+//   }
+// }
+
+function opposite(number) {
+  return number > 0 ? number * -1 : number * -1;
+}
+console.log(opposite(-3));
+
+function removeChar(str) {
+  return str.slice(1, -1);
+}
+
+console.log(removeChar("Agam"));
+
+function sumArray(array) {
+  if (array === null || array.length <= 2) return 0;
+  const sorted = array.sort((a, b) => a - b).slice(1, -1);
+  let result = 0;
+  for (let i = 0; i <= sorted.length - 1; i++) {
+    result += sorted[i];
+  }
+  return result;
+}
+
+// function sumArray(array) {
+//   return const sorted = array.sort((a, b) => a - b).slice(1, -1);
+// }
+
+console.log(sumArray([-6, 20, -1, 10, -12]));
+
+let makanan = [1, 2, 3, 4, 5];
+
+// Buat kode kamu di bawah ini
+const gorengMakanan = makanan.filter((item) => {
+  return item > 2;
+});
+
+console.log(gorengMakanan);
+
+// const word = 'Saya sangat menginginkan PS5 dari 2 bulan yang lalu';
+// const regex = /\W\d/gi;
+
+// console.log(word.match(regex));
+
+const regex = /\0x1f604/gu;
+const word = "PS5 seharga $499";
+
+console.log(word.match(regex));
+
+let no = "23";
+let reee = no.length;
+console.log(reee);
+
+function multiply(number) {
+  if (number !== "") {
+    let str = "";
+    if (number <= 0) {
+      let temp = number * -1;
+      let buff = (temp += str);
+      const result = number * 5 ** buff.length;
+      return result;
+    } else {
+      let buff = (number += str);
+      const result = number * 5 ** buff.length;
+      return result;
+    }
+  }
+}
+
+console.log(multiply(0));
+
+function multiplyy(number) {
+  if (number !== "") {
+    let str = "";
+    let buff = (number += str);
+    console.log(buff);
+    return number <= 0
+      ? number * 5 ** (buff.length - 1)
+      : number * 5 ** buff.length;
+  }
+}
+
+console.log(multiplyy(-10));
+
+function yearDays(year) {
+  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0
+    ? `${year} has 366 days`
+    : `${year} has 365 days`;
+}
+
+console.log(yearDays(2000));
+
+// function invert(array) {
+//   const result = array.map(item => {
+//     return item * -1
+//   })
+//   return result
+// }
+
+const invert = (array) => array.map((item) => item * -1);
+
+console.log(invert([1, 2, 3, 4, 5]));
+
+function fixTheMeerkat(arr) {
+  return arr.reverse();
+}
+
+const sum = (numbers) =>
+  numbers.reduce((total, item) => {
+    return total + item;
+  }, 0);
+
+console.log(sum([1, 5.2, 4, 0, -1]));
+
+const grow = (x) =>
+  x.reduce((a, b) => {
+    return a * b;
+  });
+
+const maps = (x) => x.map((item) => item * 2);
+
+function flickSwitch(arr) {
+  const filter = arr.map((item) => {
+    if (item === "flick") {
+      return false;
+    }
+  });
+  return filter;
+}
+
+console.log(flickSwitch(["codewars", "flick", "code", "wars"]));
