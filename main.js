@@ -445,12 +445,110 @@ const grow = (x) =>
 const maps = (x) => x.map((item) => item * 2);
 
 function flickSwitch(arr) {
-  const filter = arr.map((item) => {
-    if (item === "flick") {
-      return false;
-    }
-  });
-  return filter;
+  const string = "flick";
+  const searchFlick = arr.filter((item, index) => {});
+  return searchFlick;
 }
 
 console.log(flickSwitch(["codewars", "flick", "code", "wars"]));
+
+function switchItUp(number) {
+  const words = [
+    "Zero",
+    "One",
+    "Two",
+    "Three",
+    "Four",
+    "Five",
+    "Six",
+    "Seven",
+    "Eight",
+    "Nine",
+  ];
+
+  const sorted = words.filter((item, index) => {
+    console.log(index);
+    console.log(item);
+    if (number === index) {
+      return item;
+    }
+  });
+
+  return sorted.join();
+}
+
+console.log(switchItUp(2));
+
+const squareSum = (numbers) =>
+  numbers.reduce((acc, item) => acc + Math.pow(item, 2), 0);
+
+console.log(squareSum([1, 2]));
+
+function repeatStr(n, s) {
+  let str = "";
+  for (let i = 1; i <= n; i++) {
+    str += s;
+  }
+  return str;
+}
+
+console.log(repeatStr(3, "*"));
+
+const SmallestIntegerFinder = (args) => args.sort((a, b) => a - b);
+
+console.log(SmallestIntegerFinder([34, 15, 88, 2]));
+
+// function countSheeps(sheep) {
+//   return sheep.filter((sheep) => sheep === true).length;
+// }
+
+const countSheeps = (sheep) => sheep.filter((value) => value === true).length;
+
+function basicOp(operation, value1, value2) {
+  const op = {
+    "+": (a, b) => a + b,
+    "-": (a, b) => a - b,
+    "*": (a, b) => a * b,
+    "/": (a, b) => a / b,
+  };
+  return op.hasOwnProperty(operation)
+    ? op[operation](value1, value2)
+    : "Invalid operations";
+}
+
+console.log(basicOp("+", 4, 7));
+
+const noSpace = (x) => x.replace(/\s/gi, "");
+
+console.log(noSpace("8 j 8   mBliB8g  imjB8B8  jl  B"));
+
+function century(year) {
+  let result = year / 100;
+  return Math.ceil(result);
+}
+
+console.log(century(1705));
+
+const summation = (num) => {
+  let result = 0;
+  for (let i = 1; i <= num; i++) {
+    result += i;
+  }
+  return result;
+};
+
+console.log(summation(8));
+
+const litres = (time) => Math.floor(time * 0.5);
+
+console.log(litres(3));
+
+const digitize = (n) => n.toString().split("").map(Number).reverse();
+
+console.log(digitize(35231));
+
+function booleanToString(b) {
+  return Boolean(b) ? "true" : "false";
+}
+
+const greet = "hello world";
